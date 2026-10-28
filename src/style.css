@@ -1,0 +1,91 @@
+:root {
+    box-sizing: border-box;
+    --secundary-color: hsl(222, 70%, 45%);
+    --background-color: hsl(222, 100%, 20%);
+    --font-color: white;
+}
+
+body {
+    padding: 30px;
+    margin: 0px;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+.wrapper {
+   /* padding: 30px; */
+    display: block;
+    max-inline-size: 70ch;
+    margin: 0 auto;
+}
+
+.wrapper > main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.wrapper > main > .img-container {
+    display: flex;
+    justify-content: center;
+
+}
+.wrapper > main > .img-container > img {
+    inline-size: 65ch;
+    block-size: 150px;
+    object-fit: scale-down;
+}
+
+.wrapper > main > form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.wrapper > main > form > .temp-selector {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.wrapper > main > form > .search-sec {
+    flex: 0.6;
+}
+
+
+input[type="text"] {
+    opacity: 0.8;
+}
+
+input[type="text"],
+button[type="button"],
+[class^="sec-"] {
+    background-color: var(--secundary-color);
+    color: var(--font-color);
+}
+
+input[type="radio"] {
+    accent-color: var(--secundary-color);
+}
+
+[class^="sec-"]{
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.sec-2 > .grid-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+.sec-2 > .grid-info > [class^="item-"] {
+    block-size: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 5px; */
+    background-color: var(--background-color);
+    border-radius: 30px;
+
+}

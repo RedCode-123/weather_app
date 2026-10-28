@@ -1,0 +1,43 @@
+#+title: Documentation
+
+* Funciones
+** Obtener coordenadas del navegador =getLocation()=
+[[file:index.js::getLocation][getLocation]]
+
+** Obtener la fecha actual =getTodayDate=
+[[file:index.js::getTodayDate][getTodayDate]]
+
+** Obtener datos del clima actual con las coordenadas
+
+Usamos la función [[file:index.js::getDataAPI][getDataAPI]] y le pasamos un objeto con la position (=position=) y la fecha (=date=):
+
+#+begin_src js
+try {
+    let position = await getLocation();
+    let today = getTodayDate();
+    // console.log(position.latitude, position.longitude);
+    getDataAPI({position, date:today});
+}catch(error) {
+    console.error(`ERROR(${error.code}): ${error.message}`)
+#+end_src
+
+
+** Obtener datos del clima con el nombre de la ciudad
+
+Usamos la función [[file:index.js::getDataAPI][getDataAPI]] y le pasamos un objeto con el nombre del país (=location=) y la fecha (=date=):
+
+#+begin_src js
+
+try {
+    let position = await getLocation();
+    let today = getTodayDate();
+    // console.log(position.latitude, position.longitude);
+    getDataAPI({location:"argentina", date:today});
+}catch(error) {
+    console.error(`ERROR(${error.code}): ${error.message}`)
+}
+#+end_src
+
+** TODO  Hacer que el fondo de pantalla cambie según el ~data.days[0]?.icon~
+
+** TODO hacer la pantalla de carga
