@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Weather App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+        <!-- Place favicon.ico in the root directory -->
+
+    <script defer src="main.js"></script></head>
+    <body>
+        <div class="wrapper">
+            <main>
+                <div class="img-container">
+                    <img/>
+                </div>
+                <form action="#">
+                    <div class="search-sec">
+                        <input type="text" id="city" placeholder="Search city"/>
+                        <button type="button" class="search-btn">
+                            Search
+                        </button>
+                    </div>
+                    <!-- Un switch -->
+                    <div class="temp-selector">
+                        <div>
+                            <input type="radio" id="celsius" name="temp" value="metric" checked/>
+                            <label for="celsius">°C</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="fahrenheit" name="temp" value="us"/>
+                            <label for="fahrenheit">°F</label>
+                        </div>
+                    </div>
+                </form>
+
+                <section class="sec-1 general-info">
+                    <h1 class="city-name">Overview</h1>
+                    <p class="today-date"></p>
+                    <p class="temperature"></p>
+                    <p class="description"></p>
+                </section>
+
+                <section class="sec-2" >
+                    <h1>Weather details</h1>
+                    <div class="grid-info">
+
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </body>
+</html>
